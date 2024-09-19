@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControlMultiRefresh = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControlMain = new DevExpress.XtraEditors.PanelControl();
+            this.panelControlMultiRefresh = new DevExpress.XtraEditors.PanelControl();
             this.labelControlTransform = new DevExpress.XtraEditors.LabelControl();
             this.multiRefreshUC1 = new Tuling.IC.DXWithoutMvvm.UserControls.MultiRefreshUC();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlMultiRefresh)).BeginInit();
             this.panelControlMultiRefresh.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControlMain)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -56,15 +56,15 @@
             this.panelControl1.Size = new System.Drawing.Size(990, 77);
             this.panelControl1.TabIndex = 0;
             // 
-            // panelControl2
+            // simpleButton2
             // 
-            this.panelControl2.Controls.Add(this.panelControlMain);
-            this.panelControl2.Controls.Add(this.panelControlMultiRefresh);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 77);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(990, 491);
-            this.panelControl2.TabIndex = 1;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(142, 23);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(79, 30);
+            this.simpleButton2.TabIndex = 1;
+            this.simpleButton2.Text = "分页日志";
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -76,14 +76,23 @@
             this.simpleButton1.Text = "多线程刷新";
             this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
-            // simpleButton2
+            // panelControl2
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(142, 23);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(79, 30);
-            this.simpleButton2.TabIndex = 1;
-            this.simpleButton2.Text = "分页日志";
+            this.panelControl2.Controls.Add(this.panelControlMain);
+            this.panelControl2.Controls.Add(this.panelControlMultiRefresh);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 77);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(990, 491);
+            this.panelControl2.TabIndex = 1;
+            // 
+            // panelControlMain
+            // 
+            this.panelControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControlMain.Location = new System.Drawing.Point(224, 2);
+            this.panelControlMain.Name = "panelControlMain";
+            this.panelControlMain.Size = new System.Drawing.Size(764, 487);
+            this.panelControlMain.TabIndex = 1;
             // 
             // panelControlMultiRefresh
             // 
@@ -94,14 +103,6 @@
             this.panelControlMultiRefresh.Name = "panelControlMultiRefresh";
             this.panelControlMultiRefresh.Size = new System.Drawing.Size(222, 487);
             this.panelControlMultiRefresh.TabIndex = 0;
-            // 
-            // panelControlMain
-            // 
-            this.panelControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControlMain.Location = new System.Drawing.Point(224, 2);
-            this.panelControlMain.Name = "panelControlMain";
-            this.panelControlMain.Size = new System.Drawing.Size(764, 487);
-            this.panelControlMain.TabIndex = 1;
             // 
             // labelControlTransform
             // 
@@ -137,10 +138,10 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlMultiRefresh)).EndInit();
             this.panelControlMultiRefresh.ResumeLayout(false);
             this.panelControlMultiRefresh.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControlMain)).EndInit();
             this.ResumeLayout(false);
 
         }

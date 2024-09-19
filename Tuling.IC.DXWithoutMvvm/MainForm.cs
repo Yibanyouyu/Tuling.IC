@@ -6,14 +6,32 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Tuling.IC.DXWithoutMvvm.UserControls;
 
 namespace Tuling.IC.DXWithoutMvvm
 {
     public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
+        /// <summary>
+        /// 分页日志控件
+        /// </summary>
+        private PageLogUC pageLogUC;
+
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// 更新UI
+        /// </summary>
+        /// <param name="action">更新操作</param>
+        private void UpdateUI(Action action)
+        {
+            if (IsHandleCreated)
+            {
+                Invoke(action);
+            }
         }
 
         /// <summary>
@@ -43,15 +61,20 @@ namespace Tuling.IC.DXWithoutMvvm
         }
 
         /// <summary>
-        /// 更新UI
+        /// 显示分页日志
         /// </summary>
-        /// <param name="action">更新操作</param>
-        private void UpdateUI(Action action)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SimpleButton2_Click(object sender, EventArgs e)
         {
-            if (IsHandleCreated)
+            if (pageLogUC == null)
             {
-                Invoke(action);
+                pageLogUC = new PageLogUC();
             }
+
+            pageLogUC.Dock = DockStyle.Fill;
+            panelControlMain.Controls.Clear();
+            panelControlMain.Controls.Add(pageLogUC);
         }
     }
 }
