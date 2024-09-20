@@ -16,6 +16,10 @@ namespace Tuling.IC.DXWithoutMvvm
         /// 分页日志控件
         /// </summary>
         private PageLogUC pageLogUC;
+        /// <summary>
+        /// GDI 绘制控件
+        /// </summary>
+        private PaintUC paintUC;
 
         public MainForm()
         {
@@ -75,6 +79,23 @@ namespace Tuling.IC.DXWithoutMvvm
             pageLogUC.Dock = DockStyle.Fill;
             panelControlMain.Controls.Clear();
             panelControlMain.Controls.Add(pageLogUC);
+        }
+
+        /// <summary>
+        /// GDI 绘制
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SimpleButtonPaint_Click(object sender, EventArgs e)
+        {
+            if (paintUC == null)
+            {
+                paintUC = new PaintUC();
+            }
+
+            paintUC.Dock = DockStyle.Fill;
+            panelControlMain.Controls.Clear();
+            panelControlMain.Controls.Add(paintUC);
         }
     }
 }

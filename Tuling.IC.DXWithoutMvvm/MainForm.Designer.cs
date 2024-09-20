@@ -37,6 +37,7 @@
             this.panelControlMultiRefresh = new DevExpress.XtraEditors.PanelControl();
             this.labelControlTransform = new DevExpress.XtraEditors.LabelControl();
             this.multiRefreshUC1 = new Tuling.IC.DXWithoutMvvm.UserControls.MultiRefreshUC();
+            this.simpleButtonPaint = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -48,6 +49,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.simpleButtonPaint);
             this.panelControl1.Controls.Add(this.simpleButton2);
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,6 +122,16 @@
             this.multiRefreshUC1.Size = new System.Drawing.Size(218, 86);
             this.multiRefreshUC1.TabIndex = 0;
             // 
+            // simpleButtonPaint
+            // 
+            this.simpleButtonPaint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButtonPaint.Location = new System.Drawing.Point(250, 23);
+            this.simpleButtonPaint.Name = "simpleButtonPaint";
+            this.simpleButtonPaint.Size = new System.Drawing.Size(82, 30);
+            this.simpleButtonPaint.TabIndex = 2;
+            this.simpleButtonPaint.Text = "GDI绘制";
+            this.simpleButtonPaint.Click += new System.EventHandler(this.SimpleButtonPaint_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -156,6 +168,7 @@
         private DevExpress.XtraEditors.PanelControl panelControlMain;
         private UserControls.MultiRefreshUC multiRefreshUC1;
         private DevExpress.XtraEditors.LabelControl labelControlTransform;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonPaint;
     }
 }
 
