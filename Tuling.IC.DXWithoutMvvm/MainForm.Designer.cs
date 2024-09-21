@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -38,7 +39,7 @@
             this.panelControlMultiRefresh = new DevExpress.XtraEditors.PanelControl();
             this.labelControlTransform = new DevExpress.XtraEditors.LabelControl();
             this.multiRefreshUC1 = new Tuling.IC.DXWithoutMvvm.UserControls.MultiRefreshUC();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.simpleButton5);
             this.panelControl1.Controls.Add(this.simpleButton4);
             this.panelControl1.Controls.Add(this.simpleButton3);
             this.panelControl1.Controls.Add(this.simpleButton2);
@@ -60,9 +62,19 @@
             this.panelControl1.Size = new System.Drawing.Size(990, 77);
             this.panelControl1.TabIndex = 0;
             // 
+            // simpleButton4
+            // 
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(358, 23);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(104, 30);
+            this.simpleButton4.TabIndex = 3;
+            this.simpleButton4.Text = "Python调用";
+            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
+            // 
             // simpleButton3
             // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonPaint.ImageOptions.Image")));
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
             this.simpleButton3.Location = new System.Drawing.Point(250, 23);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(82, 30);
@@ -134,15 +146,15 @@
             this.multiRefreshUC1.Size = new System.Drawing.Size(218, 86);
             this.multiRefreshUC1.TabIndex = 0;
             // 
-            // simpleButton4
+            // simpleButton5
             // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(358, 23);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(104, 30);
-            this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "Python调用";
-            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(490, 23);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(93, 30);
+            this.simpleButton5.TabIndex = 4;
+            this.simpleButton5.Text = "代码生成器";
+            this.simpleButton5.Click += new System.EventHandler(this.SimpleButton5_Click);
             // 
             // MainForm
             // 
@@ -182,6 +194,7 @@
         private DevExpress.XtraEditors.LabelControl labelControlTransform;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
     }
 }
 
