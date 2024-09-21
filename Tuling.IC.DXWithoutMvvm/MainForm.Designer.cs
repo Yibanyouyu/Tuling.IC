@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -37,7 +38,7 @@
             this.panelControlMultiRefresh = new DevExpress.XtraEditors.PanelControl();
             this.labelControlTransform = new DevExpress.XtraEditors.LabelControl();
             this.multiRefreshUC1 = new Tuling.IC.DXWithoutMvvm.UserControls.MultiRefreshUC();
-            this.simpleButtonPaint = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -49,7 +50,8 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.simpleButtonPaint);
+            this.panelControl1.Controls.Add(this.simpleButton4);
+            this.panelControl1.Controls.Add(this.simpleButton3);
             this.panelControl1.Controls.Add(this.simpleButton2);
             this.panelControl1.Controls.Add(this.simpleButton1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -57,6 +59,16 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(990, 77);
             this.panelControl1.TabIndex = 0;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButtonPaint.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(250, 23);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(82, 30);
+            this.simpleButton3.TabIndex = 2;
+            this.simpleButton3.Text = "GDI绘制";
+            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
             // 
             // simpleButton2
             // 
@@ -122,15 +134,15 @@
             this.multiRefreshUC1.Size = new System.Drawing.Size(218, 86);
             this.multiRefreshUC1.TabIndex = 0;
             // 
-            // simpleButtonPaint
+            // simpleButton4
             // 
-            this.simpleButtonPaint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButtonPaint.Location = new System.Drawing.Point(250, 23);
-            this.simpleButtonPaint.Name = "simpleButtonPaint";
-            this.simpleButtonPaint.Size = new System.Drawing.Size(82, 30);
-            this.simpleButtonPaint.TabIndex = 2;
-            this.simpleButtonPaint.Text = "GDI绘制";
-            this.simpleButtonPaint.Click += new System.EventHandler(this.SimpleButtonPaint_Click);
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(358, 23);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(104, 30);
+            this.simpleButton4.TabIndex = 3;
+            this.simpleButton4.Text = "Python调用";
+            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
             // 
             // MainForm
             // 
@@ -168,7 +180,8 @@
         private DevExpress.XtraEditors.PanelControl panelControlMain;
         private UserControls.MultiRefreshUC multiRefreshUC1;
         private DevExpress.XtraEditors.LabelControl labelControlTransform;
-        private DevExpress.XtraEditors.SimpleButton simpleButtonPaint;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
     }
 }
 

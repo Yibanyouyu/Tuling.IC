@@ -20,6 +20,10 @@ namespace Tuling.IC.DXWithoutMvvm
         /// GDI 绘制控件
         /// </summary>
         private PaintUC paintUC;
+        /// <summary>
+        /// Python 调用
+        /// </summary>
+        private ForPythonUC forPythonUC;
 
         public MainForm()
         {
@@ -86,7 +90,7 @@ namespace Tuling.IC.DXWithoutMvvm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void SimpleButtonPaint_Click(object sender, EventArgs e)
+        private void SimpleButton3_Click(object sender, EventArgs e)
         {
             if (paintUC == null)
             {
@@ -96,6 +100,23 @@ namespace Tuling.IC.DXWithoutMvvm
             paintUC.Dock = DockStyle.Fill;
             panelControlMain.Controls.Clear();
             panelControlMain.Controls.Add(paintUC);
+        }
+
+        /// <summary>
+        /// Python 调用
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SimpleButton4_Click(object sender, EventArgs e)
+        {
+            if (forPythonUC == null)
+            {
+                forPythonUC = new ForPythonUC();
+            }
+
+            forPythonUC.Dock = DockStyle.Fill;
+            panelControlMain.Controls.Clear();
+            panelControlMain.Controls.Add(forPythonUC);
         }
     }
 }
