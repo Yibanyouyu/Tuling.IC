@@ -13,6 +13,22 @@ namespace Tuling.IC.SocketClient
     {
         static async Task Main(string[] args)
         {
+            //await SocketTcpClient();
+
+            //TcpClientTest();
+
+            //await TcpListenerTest();
+
+            //Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}运行结束!!!");
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Socket 方式建立 TcpClient
+        /// </summary>
+        /// <returns></returns>
+        private static async Task SocketTcpClient()
+        {
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             try
@@ -64,8 +80,108 @@ namespace Tuling.IC.SocketClient
             {
                 Console.WriteLine($"程序异常：{Environment.NewLine}{ex.Message}");
             }
+        }
 
-            Console.ReadLine();
+        /// <summary>
+        /// TcpClient 连接实例
+        /// </summary>
+        private static void TcpClientTest()
+        {
+            var tcpClient = new TcpClient();
+            try
+            {
+                tcpClient.Connect(IPAddress.Parse("127.0.0.1"), 9999);
+
+                var networkStream = tcpClient.GetStream();
+                //发送消息
+                if (networkStream.CanWrite)
+                {
+                    string msg = $"Hello {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
+                    byte[] bytes = Encoding.UTF8.GetBytes(msg);
+                    //发送消息
+                    networkStream.Write(bytes, 0, bytes.Length);
+                    Console.WriteLine($"发送消息：{Environment.NewLine}{msg}");
+                }
+
+                //接收消息
+                Task.Run(() =>
+                {
+                    while (networkStream.CanRead)
+                    {
+                        byte[] buffer = new byte[1024 * 1024];
+                        int readLength = networkStream.Read(buffer, 0, buffer.Length);
+                        if (readLength == 0)
+                        {
+                            Console.WriteLine("连接异常，数据长度为 0");
+                            networkStream.Close();
+                            break;
+                        }
+                        Console.WriteLine($"接收到消息：{Environment.NewLine}{Encoding.UTF8.GetString(buffer, 0, readLength)}");
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"程序异常：{Environment.NewLine}{ex.Message}");
+                tcpClient.Close();
+                tcpClient.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// TcpListener 实例
+        /// </summary>
+        private async static Task TcpListenerTest()
+        {
+            TcpListener tcpListener = new TcpListener(IPAddress.Parse("127.0.0.1"), 9999);
+
+            try
+            {
+                tcpListener.Start();
+
+                Console.WriteLine("TcpListener 127.0.0.1:9999 已启动");
+
+                while (true)
+                {
+                    TcpClient tcpClient = await tcpListener.AcceptTcpClientAsync();
+                    Console.WriteLine($"{tcpClient.Client.RemoteEndPoint} 已连接...");
+
+                    _ = Task.Run(async () =>
+                    {
+                        try
+                        {
+                            using (tcpClient)
+                            {
+                                NetworkStream networkStream = tcpClient.GetStream();
+
+                                //发送消息
+                                string msg = $"Hello {DateTime.Now:yyyy-MM-dd HH:mm:ss}";
+                                byte[] bytes = Encoding.UTF8.GetBytes(msg);
+                                networkStream.Write(bytes, 0, bytes.Length);
+                                Console.WriteLine($"发送消息：{Environment.NewLine}{msg}");
+
+                                //接收消息
+                                var buffer = new byte[1024 * 1024];
+                                int readLength;
+                                while ((readLength = await networkStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                                {
+                                    Console.WriteLine($"接收到消息：{Environment.NewLine}{Encoding.UTF8.GetString(buffer, 0, readLength)}");
+                                }
+
+                                Console.WriteLine("客户端已断开连接");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"处理客户端时发生异常：{ex.Message}");
+                        }
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"程序异常：{Environment.NewLine}{ex.Message}");
+            }
         }
     }
 }
