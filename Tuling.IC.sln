@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuling.IC.DXWithMvvm", "Tul
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Tuling.IC.Setup", "Tuling.IC.Setup\Tuling.IC.Setup.vdproj", "{9D3CA558-EBD3-4636-A433-E270227BBE8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuling.IC.SerialPort", "Tuling.IC.SerialPort\Tuling.IC.SerialPort.csproj", "{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,18 @@ Global
 		{9D3CA558-EBD3-4636-A433-E270227BBE8E}.Release|Any CPU.ActiveCfg = Release
 		{9D3CA558-EBD3-4636-A433-E270227BBE8E}.Release|x64.ActiveCfg = Release
 		{9D3CA558-EBD3-4636-A433-E270227BBE8E}.Release|x86.ActiveCfg = Release
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Debug|x64.Build.0 = Debug|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Debug|x86.Build.0 = Debug|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Release|x64.ActiveCfg = Release|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Release|x64.Build.0 = Release|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Release|x86.ActiveCfg = Release|Any CPU
+		{DC0F7477-AF5B-4891-A67E-E4E4D2794F63}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

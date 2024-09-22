@@ -1736,6 +1736,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -4610,7 +4618,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Tuling.IC.Setup"
         "ProductCode" = "8:{8F78BD9D-76B5-4FA4-9486-921D806EC4C7}"
-        "PackageCode" = "8:{765AED72-33D9-49BE-BCAA-47658A9FBE59}"
+        "PackageCode" = "8:{1E5D89F0-48F7-447B-A995-C7F052301400}"
         "UpgradeCode" = "8:{71D013B2-99CE-46AD-8B7F-5FC0F8395AA0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -4618,12 +4626,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Tuling"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Tuling.IC.Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Sail"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
