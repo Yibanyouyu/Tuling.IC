@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuling.IC.SerialPort", "Tul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuling.IC.SocketClient", "Tuling.IC.SocketClient\Tuling.IC.SocketClient.csproj", "{B92DA642-F86C-4878-8171-E60D3ED9E10D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuling.IC.SocketHelper", "Tuling.IC.SocketHelper\Tuling.IC.SocketHelper.csproj", "{DB543951-5135-4847-8EFD-5E064F3677E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,18 @@ Global
 		{B92DA642-F86C-4878-8171-E60D3ED9E10D}.Release|x64.Build.0 = Release|Any CPU
 		{B92DA642-F86C-4878-8171-E60D3ED9E10D}.Release|x86.ActiveCfg = Release|Any CPU
 		{B92DA642-F86C-4878-8171-E60D3ED9E10D}.Release|x86.Build.0 = Release|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Debug|x64.Build.0 = Debug|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Debug|x86.Build.0 = Debug|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Release|x64.ActiveCfg = Release|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Release|x64.Build.0 = Release|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Release|x86.ActiveCfg = Release|Any CPU
+		{DB543951-5135-4847-8EFD-5E064F3677E7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
